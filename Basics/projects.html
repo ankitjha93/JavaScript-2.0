@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+</body>
+<script>
+  const urlRequest = "https://api.github.com/users/ankitjha93"
+
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', urlRequest)
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState === 4){
+      const ankit = JSON.parse(this.responseText);
+      console.log(ankit.following)
+    }
+  }
+
+
+  xhr.send()
+</script>
+</html>
